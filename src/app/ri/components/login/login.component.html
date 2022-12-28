@@ -1,0 +1,30 @@
+<mat-card class="login_container">
+  <h3>Hello</h3>
+
+  <form class="form_container">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="email"
+          autocomplete="off"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          type="password"
+          autocomplete="off"
+        />
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary">Login</button>
+  </form>
+</mat-card>

@@ -1,65 +1,80 @@
-<!-- <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isTablet$ | async) ? 'dialog' : 'navigation'"
-        [mode]="(isTablet$ | async) ? 'over' : 'side'" [opened]="false">
-        
-        <mat-nav-list>
-            <a routerLink="/" mat-list-item (click)="drawer.close()">Home</a>
-            <a routerLink="/relation-investisseurs" mat-list-item (click)="drawer.close()">Relations investisseurs</a>
-            <a routerLink="/" mat-list-item (click)="drawer.close()">Contact</a>
-            <a routerLink="/partenariat" mat-list-item (click)="drawer.close()">Partenariat</a>
-            <a routerLink="/commencer-à-vendre" mat-list-item (click)="drawer.close()">Commencer à vendre</a>
-        </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <mat-toolbar>
-            <span class="logo">
-                <img src="assets/logo.webp" />
-            </span>
-            <span class="fill-space"></span>
-            <button type="button" mat-icon-button (click)="drawer.toggle()" *ngIf="(isTablet$ | async)">
-                <mat-icon>menu</mat-icon>
-            </button>
-            <div *ngIf="!(isTablet$ | async)">
-                <a routerLink="/" mat-button>Home</a>
-                <a routerLink="/relation-investisseurs" mat-button>Relations investisseurs</a>
-                <a routerLink="/" mat-button>Contact</a>
-                <a routerLink="/partenariat" mat-button>Partenariat</a>
-                <a routerLink="/commencer-à-vendre" mat-button>Commencer à vendre</a>
-            </div>
-        </mat-toolbar>
-    </mat-sidenav-content>
-</mat-sidenav-container> -->
-
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isTablet$ | async) ? 'dialog' : 'navigation'"
-        [mode]="(isTablet$ | async) ? 'over' : 'side'" [opened]="false">
-        <mat-toolbar>Menu</mat-toolbar>
-        <mat-nav-list>
-            <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
-            <a mat-list-item routerLink="/relation-investisseurs" (click)="drawer.close()">Relations investisseurs</a>
-            <a mat-list-item routerLink="/" (click)="drawer.close()">Contact</a>
-            <a mat-list-item routerLink="/partenariat" (click)="drawer.close()">Partenariat</a>
-            <a mat-list-item routerLink="/commencer-à-vendre" (click)="drawer.close()">Commencer à vendre</a>
-        </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <mat-toolbar>
-            <span class="logo" routerLink="/">
-                <img src="assets/logo.webp" />
-            </span>
-            <span class="fill-space"></span>
-            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
-                *ngIf="isTablet$ | async">
-                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-            </button>
-            <div *ngIf="!(isTablet$ | async)">
-                <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}" mat-button>Home</a>
-                <a routerLink="/relation-investisseurs" routerLinkActive="active" mat-button>Relations investisseurs</a>
-                <a routerLink="/" mat-button>Contact</a>
-                <a routerLink="/partenariat" routerLinkActive mat-button>Partenariat</a>
-                <a routerLink="/commencer-à-vendre" routerLinkActive mat-button>Commencer à vendre</a>
-            </div>
-        </mat-toolbar>
-        <ng-content></ng-content>
-    </mat-sidenav-content>
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isTablet$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isTablet$ | async) ? 'over' : 'side'"
+    [opened]="false"
+  >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
+      <a
+        mat-list-item
+        routerLink="/relation-investisseurs"
+        (click)="drawer.close()"
+        >Relations investisseurs</a
+      >
+      <a mat-list-item routerLink="/" (click)="drawer.close()">Contact</a>
+      <a mat-list-item routerLink="/partenariat" (click)="drawer.close()"
+        >Partenariat</a
+      >
+      <a mat-list-item routerLink="/commencer-à-vendre" (click)="drawer.close()"
+        >Commencer à vendre</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <span class="logo" routerLink="/">
+        <img src="assets/logo.webp" />
+      </span>
+      <span class="fill-space"></span>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isTablet$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div *ngIf="!(isTablet$ | async)" class="menu_items">
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          mat-button
+          >Home</a
+        >
+        <a
+          routerLink="/relation-investisseurs"
+          routerLinkActive="active"
+          mat-button
+          >Relations investisseurs</a
+        >
+        <a routerLink="/" mat-button>Contact</a>
+        <a
+          routerLink="/partenariat"
+          routerLinkActive
+          mat-raised-button
+          color="primary"
+          >Partenariat</a
+        >
+        <a
+          routerLink="/commencer-à-vendre"
+          routerLinkActive
+          mat-raised-button
+          color="accent"
+          class="white_color"
+          >Commencer à vendre</a
+        >
+        <!-- <a routerLink="" mat-icon-button>
+          <mat-icon>person</mat-icon>
+        </a> -->
+      </div>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
 </mat-sidenav-container>
