@@ -11,3 +11,14 @@
   background-size: cover;
   background-position: center;
 }
+
+.footer_container {
+  background-image: url("./../../assets/images/pattern footer.png");
+  background-size: cover;
+  background-position: center;
+  /* opacity: 0.1; */
+}
+
+.logo {
+  max-height: 40px;
+}
