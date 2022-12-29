@@ -26,7 +26,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar>
+    <mat-toolbar class="max-w-7xl m-auto bg-transparent">
       <span class="logo" routerLink="/">
         <img src="assets/logo.webp" />
       </span>
@@ -58,18 +58,25 @@
         <a
           routerLink="/partenariat"
           routerLinkActive
-          mat-raised-button
-          color="primary"
+          class="py-2 px-4 rounded-lg text-white bg-gradient-to-l from-bluestart to-blueend hover:from-blueend hover:to-bluestart"
           >Partenariat</a
         >
+
         <a
           routerLink="/commencer-à-vendre"
           routerLinkActive
-          mat-raised-button
-          color="accent"
-          class="white_color"
+          class="py-2 px-4 rounded-lg text-white bg-gradient-to-l from-orangestart to-orandeend hover:from-orandeend hover:to-orangestart"
           >Commencer à vendre</a
         >
+        <!-- <a
+          routerLink="/commencer-à-vendre"
+          routerLinkActive
+          mat-raised-button
+          class="text-white grad-orange px-4 py-2 rounded-lg hover:bg-violet-600"
+          >Commencer à vendre</a
+        > -->
+        <!-- <a class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500"></a> -->
+
         <!-- <a routerLink="" mat-icon-button>
           <mat-icon>person</mat-icon>
         </a> -->
