@@ -5,3 +5,8 @@
   margin: 1rem auto;
   width: 100%;
 }
+
+.home_container {
+  background-image: url("./../../../../assets/images/hero image.png");
+  height: 80vh;
+}
